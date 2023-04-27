@@ -5,7 +5,7 @@ function Home() {
     <>
       <Row>
         <Col span={11}></Col>
-          <h1>Home Page</h1>
+          <h1>Home Page</h1><br/>
         <Col span={12}></Col>
       </Row>
     </>

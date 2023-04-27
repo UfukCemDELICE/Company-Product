@@ -1,14 +1,14 @@
-import {Layout, Menu, Switch, Col, Row } from 'antd'
-import { HomeOutlined, RadarChartOutlined, PieChartOutlined, UserOutlined} from '@ant-design/icons';
+import {Layout, Menu, Col, Row } from 'antd'
+import { HomeOutlined, RadarChartOutlined, PieChartOutlined } from '@ant-design/icons';
 import { useNavigate } from 'react-router-dom';
 
 export default function Navbar() {
   const  navigate  = useNavigate();
   return (
     <Row>
-      <Col span={8}>
+      <Col span={10}>
         </Col>
-        <Layout>
+          <Layout>
           <Menu
             onClick={({key}) => {
               navigate(key);
@@ -30,22 +30,13 @@ export default function Navbar() {
                 label: 'Product',
                 key: '/product',
                 icon: <PieChartOutlined />,
-              },
-              {
-                label: 'Dark Mode',
-                key: 'darkmode',
-                icon: <Switch />
-              },
-              {
-                label: "User ",
-                key: "User",
-                icon: <UserOutlined />
               }
             ]}
           />
-        </Layout>
+          </Layout> 
         <Col span={8}>
       </Col>
     </Row>
+    
   );
 }
