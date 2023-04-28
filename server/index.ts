@@ -1,10 +1,20 @@
-import express  from "express";
-const app = express();
+import express, {Request, Response}  from "express";
+const mongoose = require('mongoose');
+const dotenv = require('dotenv');
+const db = require('./config/database');
 
-app.get("/", (req, res) => {
+const app = express();
+dotenv.config();
+
+
+app.get("/", (req:Request, res: Response) => {
   res.send("Hello World!");
 });
 
-app.listen(3000, () => {
-  console.log("Server is running on port 3000");
+const PORT = process.env.PORT || 3000;
+
+db()
+
+app.listen(PORT, () => {
+  console.log(`Server is running on port ${PORT}`);
 });
