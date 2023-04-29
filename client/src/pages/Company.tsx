@@ -84,7 +84,8 @@ function Company() {
 
   return (
     <>
-      <Table columns={columns} dataSource={data} />
+    <br/><br/>
+      <Table columns={columns} dataSource={data} />  
     </>
   )
 }

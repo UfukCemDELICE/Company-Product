@@ -83,8 +83,9 @@ const data: DataType[] = [
 
 function Product() {
   return (
-      <>
-      <Table columns={columns} dataSource={data} />
+    <>
+    <br/><br/>
+      <Table columns={columns} dataSource={data} />  
     </>
   )
 }
